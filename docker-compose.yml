@@ -1,0 +1,14 @@
+# My docker-compose.yml file
+
+# Postgresql database
+postgresql-postgis:
+  image: jmmoreno/docker-postgresql-postgis:9.5-2.2
+  ports:
+  - "5432:5432"
+  volumes:
+  - /opt/db/postgresql/data:/var/lib/postgresql/data
+  environment:
+  - POSTGRES_USER=my_admin_user
+  - POSTGRES_PASSWORD=my_admin_password
+  - POSTGRES_DB=my_test_db
+
